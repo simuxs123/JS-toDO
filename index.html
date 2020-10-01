@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS3</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 mt-1">
+                <form action="">
+                    <div class="form-group row">
+                        <label for="subject" class="col-3 col-form-label">Subject</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control mas" id="subject" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="priority" class="col-3 col-form-label">Priority</label>
+                        <div class="col-9">
+                            <select class="custom-select mas" id="priority" >
+                                <option selected>Choose...</option>
+                                <option value="High">High</option>
+                                <option value="Normal">Normal</option>
+                                <option value="Low">Low</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="date" class="col-3 col-form-label">Due date</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control mas" id="date" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="status" class="col-3 col-form-label">Status</label>
+                        <div class="col-9">
+                            <select class="custom-select mas" id="status" >
+                                <option selected>Choose...</option>
+                                <option value="Complete">Complete</option>
+                                <option value="In Progress">In Progress</option>
+                                <option value="New">New</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="percent" class="col-3 col-form-label">Percent Completed</label>
+                        <div class="col-9">
+                            <select class="custom-select mas" id="status" >
+                                <option selected>Choose...</option>
+                                <option value="100">100%</option>
+                                <option value="75">75%</option>
+                                <option value="50">50%</option>
+                                <option value="25">25%</option>
+                                <option value="0">0%</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+        </div>   
+        <div class="col-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-12 mt-3 " id="box">
+                <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item"><i class="fas fa-project-diagram"></i></li>
+                    <li class="list-group-item item1 pl-5">Subject</li>
+                    <li class="list-group-item item2 pl-1">Priority</li>
+                    <li class="list-group-item item3 pl-1">Due date</li>
+                    <li class="list-group-item item4 pl-1">Status</li>
+                    <li class="list-group-item item5 pl-1">Percent completed</li>
+                    <li class="list-group-item item6 pl-1">Modified on</li>
+                  </ul>
+                <ul class="list">
+                </ul>  
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
