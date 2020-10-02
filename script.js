@@ -4,25 +4,36 @@ let logo=document.querySelectorAll(".fa-check");
 let logoExit=document.querySelectorAll(".fa-times-circle");
 let button=document.querySelector("button");
 let mas=document.querySelectorAll(".mas");
-
-button.addEventListener("click", function (e) {
-    e.preventDefault();
-    addTodo();
-})
+button.addEventListener("click", function (e) {   
+    if(isEmty()){
+        e.preventDefault();
+        addTodo();
+    } 
+},false)
 ul.addEventListener("click", function (e) {
      check(e);
   })
 ul.addEventListener("click", function (e) {
     remove(e);
     })
+function isEmty() {
+    for(let i=0; i<mas.length; i++){
+    if (mas[i].value ==="")                                  
+    { 
+        window.alert("Uzpildykite forma!"); 
+        return false; 
+        
+    }   
+    }
+       return true; 
 
-
-    function remove(e){
-    if (e.target.classList.contains('fa-times-circle')) {
-        let liNauj=e.target.parentNode.parentNode.parentNode;
-        let ulNauj=liNauj.parentNode;
-        ulNauj.removeChild(liNauj);
-        }    
+}
+function remove(e){
+if (e.target.classList.contains('fa-times-circle')) {
+    let liNauj=e.target.parentNode.parentNode.parentNode;
+    let ulNauj=liNauj.parentNode;
+    ulNauj.removeChild(liNauj);
+    }    
 }    
 function check(e){
     if (e.target.classList.contains('fa-check')) {
@@ -37,13 +48,14 @@ function addTodo(){
     p.classList.add("logo");
     p.innerHTML='<i class="fas fa-user-check"></i>';   
     liAdd.appendChild(p);
-    for(var i=0; i<mas.length; i++){
+    for(let i=0; i<mas.length; i++){
         if(i===0){
             p=document.createElement("P");
             p.classList.add('item'+(i+1).toString());
             p.innerHTML='<span class="pl-2 pr-3">'+'<i class="fas fa-check"></i></span> '+mas[i].value;
             mas[i].value="";
             liAdd.appendChild(p);
+              
         } 
          else {
             p=document.createElement("P");
