@@ -4,11 +4,36 @@ let logo=document.querySelectorAll(".fa-check");
 let logoExit=document.querySelectorAll(".fa-times-circle");
 let button=document.querySelector("button");
 let mas=document.querySelectorAll(".mas");
+
 button.addEventListener("click", function (e) {
+    e.preventDefault();
+    addTodo();
+})
+ul.addEventListener("click", function (e) {
+     check(e);
+  })
+ul.addEventListener("click", function (e) {
+    remove(e);
+    })
+
+
+    function remove(e){
+    if (e.target.classList.contains('fa-times-circle')) {
+        let liNauj=e.target.parentNode.parentNode.parentNode;
+        let ulNauj=liNauj.parentNode;
+        ulNauj.removeChild(liNauj);
+        }    
+}    
+function check(e){
+    if (e.target.classList.contains('fa-check')) {
+        e.target.classList.toggle('check');
+        e.target.parentElement.parentElement.classList.toggle("textDec");
+        }   
+}
+function addTodo(){
     let d=new Date();
     let liAdd=document.createElement("LI");
     let p=document.createElement("P");
-    e.preventDefault();
     p.classList.add("logo");
     p.innerHTML='<i class="fas fa-user-check"></i>';   
     liAdd.appendChild(p);
@@ -55,22 +80,7 @@ button.addEventListener("click", function (e) {
     liAdd.classList.add("li");
     liAdd.appendChild(p);
     ul.appendChild(liAdd);
-  })
-ul.addEventListener("click", function (e) {
-    if (e.target.classList.contains('fa-check')) {
-        e.target.classList.toggle('check');
-        e.target.parentElement.parentElement.classList.toggle("textDec");
-      }
-    
-  })
+};
 
 
-    ul.addEventListener("click", function (e) {
-        if (e.target.classList.contains('fa-times-circle')) {
-            let liNauj=e.target.parentNode.parentNode.parentNode;
-            let ulNauj=liNauj.parentNode;
-            ulNauj.removeChild(liNauj);
-          }
-        
-      })
     

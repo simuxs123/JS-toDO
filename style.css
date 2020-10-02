@@ -9,6 +9,9 @@ ul {
     padding-left: 0;
     list-style: none;
 }
+.fa-check{
+    font-size: 20px;
+}
 .logo {
     width: 6%;
     text-align: center;
@@ -27,6 +30,7 @@ ul {
 }
 .fa-times-circle {
     color: red;
+    font-size: 20px;
 }
 .pill {
     line-height: 24px;
