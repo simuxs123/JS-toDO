@@ -52,7 +52,7 @@ function addTodo(){
         if(i===0){
             p=document.createElement("P");
             p.classList.add('item'+(i+1).toString());
-            p.innerHTML='<span class="pl-2 pr-3">'+'<i class="fas fa-check"></i></span> '+mas[i].value;
+            p.innerHTML='<span class="logoCheck pl-2 pr-3">'+'<i class="fas fa-check"></i></span> '+mas[i].value;
             mas[i].value="";
             liAdd.appendChild(p);
               
